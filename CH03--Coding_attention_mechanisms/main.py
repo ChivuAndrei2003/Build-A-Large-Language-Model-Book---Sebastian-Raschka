@@ -13,3 +13,5 @@ inputs = torch.tensor(
 
 d_in = inputs.shape[1]  # the input embedding size, d=3
 d_out = 2  # the output embedding size, d=2
+
+print(d_in, d_out)
