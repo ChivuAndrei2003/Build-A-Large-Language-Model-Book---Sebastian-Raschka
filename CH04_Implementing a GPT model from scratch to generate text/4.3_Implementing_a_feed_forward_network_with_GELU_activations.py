@@ -23,7 +23,6 @@ class GELU(nn.Module):
 # like and how it compares to the
 # ReLU function, let’s plot these functions side by side:
 
-
 x = torch.linspace(-3, 3, 100)
 gelu, relu = GELU(), nn.ReLU()
 
