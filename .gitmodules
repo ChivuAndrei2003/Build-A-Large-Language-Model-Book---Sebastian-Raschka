@@ -3,5 +3,11 @@
 	url = https://github.com/rasbt/LLMs-from-scratch
 
 [submodule "Reasoning-from-scratch--official"]
-	path = ReasoningMs-from-scratch
+	path = Reasoning-from-scratch
 	url = https://github.com/rasbt/reasoning-from-scratch
+[submodule "LLMs-from-scratch"]
+	path = LLMs-from-scratch
+	url = https://github.com/rasbt/LLMs-from-scratch.git
+[submodule "Reasoning-from-scratch"]
+	path = Reasoning-from-scratch
+	url = https://github.com/rasbt/reasoning-from-scratch.git
