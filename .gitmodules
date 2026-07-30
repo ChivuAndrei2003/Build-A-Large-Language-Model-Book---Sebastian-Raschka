@@ -1,13 +1,8 @@
-[submodule "LLMs-from-scratch--official"]
-	path = LLMs-from-scratch
-	url = https://github.com/rasbt/LLMs-from-scratch
-
-[submodule "Reasoning-from-scratch--official"]
-	path = Reasoning-from-scratch
-	url = https://github.com/rasbt/reasoning-from-scratch
 [submodule "LLMs-from-scratch"]
 	path = LLMs-from-scratch
 	url = https://github.com/rasbt/LLMs-from-scratch.git
+	branch = main
 [submodule "Reasoning-from-scratch"]
 	path = Reasoning-from-scratch
 	url = https://github.com/rasbt/reasoning-from-scratch.git
+	branch = main
