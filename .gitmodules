@@ -1,0 +1,7 @@
+[submodule "LLMs-from-scratch--official"]
+	path = LLMs-from-scratch
+	url = https://github.com/rasbt/LLMs-from-scratch
+
+[submodule "Reasoning-from-scratch--official"]
+	path = ReasoningMs-from-scratch
+	url = https://github.com/rasbt/reasoning-from-scratch
