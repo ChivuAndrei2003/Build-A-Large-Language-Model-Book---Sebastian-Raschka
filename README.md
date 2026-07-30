@@ -1,8 +1,17 @@
 # Build a Large Language Model Book — Sebastian Raschka
 
-This repository covers Build a Large Language Model (From Scratch) and Build a Reasoning Model (From Scratch), both written by Sebastian Raschka, along with my personal notes and implementations based on the books.
+This repository covers
 
-## Official Code Repositories
+ Build a Large Language Model (From Scratch) 
+
+ and
+
+ Build a Reasoning Model (From Scratch),
+
+ 
+  both written by Sebastian Raschka, along with my (incomplete for now) personal notes and implementations based on the books.
+
+## OFFICIAL code repos  MADE BY THE AUTHOR : 
 
 The official code repositories for each book are:
 
