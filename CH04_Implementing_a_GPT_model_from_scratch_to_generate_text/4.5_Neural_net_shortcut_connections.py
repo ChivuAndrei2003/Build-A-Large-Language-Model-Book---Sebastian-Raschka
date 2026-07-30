@@ -33,8 +33,7 @@ class ExampleDeepNeuralNetwork(nn.Module):
         return x
 
 
-# Let’s use this code to initialize a neural network w
-# ithout shortcut connections.
+# Let’s use this code to initialize a neural network without shortcut connections.
 # Each layer will be initialized such that it accepts
 # an example with three input values and returns three output values.
 # The last layer returns a single output value:
@@ -44,10 +43,9 @@ sample_input = torch.tensor([[1.0, 0.0, -1.0]])
 torch.manual_seed(123)
 model_without_shortcut = ExampleDeepNeuralNetwork(layer_sizes, use_shortcut=False)
 
+
 # Next, we implement a function that computes the gradients in the model’s back-
 # ward pass:
-
-
 def print_gradients(model, x):
     # Forward pass
     output = model(x)
@@ -67,4 +65,13 @@ def print_gradients(model, x):
             print(f"{name} has gradient mean of {param.grad.abs().mean().item()}")
 
 
-# Am ramas la pagina 112
+print()
+print_gradients(
+    model_without_shortcut, sample_input
+)  # prints gradients thtt become smaller => vanishing gradient problem
+
+# Let’s now instantiate a model with skip connections and see how it compares:
+print()
+torch.manual_seed(123)
+model_with_shortcut = ExampleDeepNeuralNetwork(layer_sizes, use_shortcut=True)
+print_gradients(model_with_shortcut, sample_input)

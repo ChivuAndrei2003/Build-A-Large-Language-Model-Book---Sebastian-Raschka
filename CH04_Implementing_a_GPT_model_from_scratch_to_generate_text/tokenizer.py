@@ -1,12 +1,10 @@
 import tiktoken
 import torch
-import torch.nn as nn
-from gptPlaceholder import (
-    GPT_CONFIG_124M,
-    DummyGPTModel,
-    DummyLayerNorm,
-    DummyTransformerBlock,
-)
+
+try:
+    from .gptPlaceholder import GPT_CONFIG_124M, DummyGPTModel
+except ImportError:
+    from gptPlaceholder import GPT_CONFIG_124M, DummyGPTModel
 
 tokenizer = tiktoken.get_encoding("gpt2")
 batch = []
@@ -16,16 +14,18 @@ txt2 = "Every day holds a"
 batch.append(torch.tensor(tokenizer.encode(txt1)))
 batch.append(torch.tensor(tokenizer.encode(txt2)))
 batch = torch.stack(batch, dim=0)
-print()
-print(batch)
 
-torch.manual_seed(123)
-model = DummyGPTModel(GPT_CONFIG_124M)
-logits = model(batch)
+if __name__ == "__main__":
+    print()
+    print(batch)
 
-# The model outputs, which are commonly referred to as logits, are as follows:
-print("\nOutput shape :", logits.shape)
-print("\n", logits)
+    torch.manual_seed(123)
+    model = DummyGPTModel(GPT_CONFIG_124M)
+    logits = model(batch)
+
+    # The model outputs, which are commonly referred to as logits, are as follows:
+    print("\nOutput shape :", logits.shape)
+    print("\n", logits)
 
 # OUTPUTS : 
 # tensor([[[-1.2034,  0.3201, -0.7130,  ..., -1.5548, -0.2390, -0.4667],
