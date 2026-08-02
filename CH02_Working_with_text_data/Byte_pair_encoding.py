@@ -93,16 +93,10 @@ class GPTDatasetV1(Dataset):
 # The following code uses the GPTDatasetV1 to load the inputs in batches via a PyTorch
 # DataLoader :
 def create_dataloader_v1(
-    txt,
-    batch_size=4,
-    max_length=256,
-    stride=128,
-    shuffle=True,
-    drop_last=True,
-    num_workers=0,
+    txt, batch_size, max_length, stride, shuffle=True, drop_last=True, num_workers=0
 ):
     # Initialize the tokenizer
-    tokenizer = tiktoken.get_encoding("gpt2")  # Initializes the tokenizer
+    tokenizer = tiktoken.get_encoding("gpt2")
 
     # Create dataset
     dataset = GPTDatasetV1(txt, tokenizer, max_length, stride)
@@ -112,12 +106,10 @@ def create_dataloader_v1(
         dataset,
         batch_size=batch_size,
         shuffle=shuffle,
-        #
-        # drop_last=True drops the last  batch if it is shorter than the
-        # specified batch_size to prevent loss spikes during training.
         drop_last=drop_last,
         num_workers=num_workers,
     )
+
     return dataloader
 
 
@@ -141,7 +133,7 @@ print(second_batch)
 
 print("""
       \n
-      Exercise 2.2 Data loaders with different strides and context sizes : 
+      Exercise 2.2 Data loaders with different strides and context sizes :
        try to run it with different
       settings such as max_length=2 and stride=2, and max_length=8 and stride=2.
       \n""")
@@ -245,7 +237,7 @@ layer:""")
 context_length = max_length
 pos_embedding_layer = torch.nn.Embedding(context_length, output_dim)
 pos_embeddings = pos_embedding_layer(torch.arange(context_length))
-print("\n",pos_embeddings.shape)
+print("\n", pos_embeddings.shape)
 
 input_embeddings = token_embeddings + pos_embeddings
 print(input_embeddings.shape)
