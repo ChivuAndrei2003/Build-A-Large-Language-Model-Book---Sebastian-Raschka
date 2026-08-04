@@ -5,6 +5,9 @@ __pycache__/
 .DS_Store
 # C extensions
 *.so
+model_and_optimizer.pth
+model.pth
+gpt2/
 
 # Distribution / packaging
 .Python
