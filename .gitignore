@@ -8,7 +8,8 @@ __pycache__/
 model_and_optimizer.pth
 model.pth
 gpt2/
-
+review_classifier.pth
+sms_spam_collection.zip
 # Distribution / packaging
 .Python
 build/
