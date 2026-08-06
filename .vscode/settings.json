@@ -1,3 +1,7 @@
 {
-  "python-envs.defaultEnvManager": "ms-python.python:system"
+  "python-envs.defaultEnvManager": "ms-python.python:system",
+  "python.analysis.extraPaths": [
+    "./LLMs-from-scratch/pkg",
+    "./LLMs-from-scratch/ch05/18_muon"
+  ]
 }
