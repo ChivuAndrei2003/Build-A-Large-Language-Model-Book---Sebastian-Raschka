@@ -1,0 +1,8 @@
+- The instruction-fine-tuning process adapts a pretrained LLM to follow human instructions and generate desired responses.
+- Preparing the dataset involves downloading an instruction-response dataset, formatting the entries, and splitting it into train, validation, and test sets.
+- Training batches are constructed using a custom collate function that pads sequences, creates target token IDs, and masks padding tokens.
+- We load a pretrained GPT-2 medium model with 355 million parameters to
+- serve as the starting point for instruction fine-tuning.
+- The pretrained model is fine-tuned on the instruction dataset using a training loop similar to pretraining.
+- Evaluation involves extracting model responses on a test set and scoring them (for example, using another LLM).
+- The Ollama application with an 8-billion-parameter Llama model can be used to automatically score the fine-tuned model’s responses on the test set, providing an average score to quantify performance.

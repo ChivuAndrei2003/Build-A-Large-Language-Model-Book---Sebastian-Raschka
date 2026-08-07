@@ -10,6 +10,10 @@ model.pth
 gpt2/
 review_classifier.pth
 sms_spam_collection.zip
+sms_spam_collection/
+instruction-data-with-response.json
+instruction-data.json
+gpt2-medium355M-sft.pth
 # Distribution / packaging
 .Python
 build/
