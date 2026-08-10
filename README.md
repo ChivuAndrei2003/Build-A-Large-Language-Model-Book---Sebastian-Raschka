@@ -8,7 +8,7 @@ and
 
 [Build a Reasoning Model (From Scratch)](Build_A_Reasoning_Model_Complete.pdf),
 
-both written by Sebastian Raschka, along with my (incomplete for now and quite messy) personal notes and implementations based on the books.
+both written by Sebastian Raschka, along with my ( quite messy) personal notes and implementations based on the books.
 
 ## OFFICIAL code repos MADE BY THE AUTHOR :
 
